@@ -26,7 +26,11 @@ class MainActivity : AppCompatActivity() {
 
         val textView: TextView = findViewById<TextView>(R.id.etUser) as TextView
         val login : String = textView.text.toString()
-          Toast.makeText(applicationContext,"Bem vindo $login", Toast.LENGTH_LONG).show()
+
+        val loginprocess = LoginProcess (applicationContext, login)
+        loginprocess.loginUser()
+
+        //Toast.makeText(applicationContext,"Bem vindo $login", Toast.LENGTH_LONG).show()
     }
 
 
