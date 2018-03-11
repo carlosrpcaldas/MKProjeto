@@ -5,8 +5,13 @@ import android.os.Bundle
 
 class MainActivity : AppCompatActivity() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    override fun onCreate(icicle: Bundle?) {
+        super.onCreate(icicle)
         setContentView(R.layout.activity_main)
+        onClick(R.id.btLogin) {onClickLogin()}
+    }
+    fun onClickLogin(){
+        val login = getTextString(R.id.etUser)
+
     }
 }
